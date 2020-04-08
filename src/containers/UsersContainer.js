@@ -1,11 +1,10 @@
 import React, {useEffect, useState, useCallback} from 'react';
+import {StyleSheet, View} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {Dropdown} from 'react-native-material-dropdown';
 import {UsersListContainer} from '../component/UsersList';
-import {fetchUsers} from '../redux/usersReducer';
+import {fetchUsers, selectAllUsers} from '../redux/UsersSlice';
 import {MainLayout} from '../component/layout/MainLayout';
-import {StyleSheet, View} from 'react-native';
-import {selectAllUsers} from '../redux/usersReducer';
 import {Loading} from '../component/ui/Loading';
 import {ErrorView} from '../component/ui/ErrorView';
 

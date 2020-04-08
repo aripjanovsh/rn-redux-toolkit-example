@@ -14,7 +14,7 @@ export const fetchUsers = createAsyncThunk('users/fetchUsers', async params => {
 
 export const usersAdapter = createEntityAdapter();
 
-const usersReducer = createSlice({
+const usersSlice = createSlice({
   name: 'users',
   initialState: usersAdapter.getInitialState({
     loading: 'pending',
@@ -46,8 +46,8 @@ const usersReducer = createSlice({
   },
 });
 
-export default usersReducer.reducer;
-
 export const {selectAll: selectAllUsers} = usersAdapter.getSelectors(
   state => state.users,
 );
+
+export default usersSlice.reducer;
